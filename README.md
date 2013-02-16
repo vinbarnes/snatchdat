@@ -1,4 +1,4 @@
-# Mimeo Chrome Extension
+# Mimeo Chrome Extension for GitHub
 
 Snatches PR, Issue, SHA references from the URL and copies them to the clipboard
 so you can paste them easily into comments.
