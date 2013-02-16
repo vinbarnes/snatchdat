@@ -1,9 +1,9 @@
 {
 "manifest_version": 2,
 
-"name": "GitHub Helper",
-"description": "This extension eases grabbing Issue, PR, and commit SHAs from the current GitHub URL.",
-"version": "0.0.0",
+"name": "Mimeo",
+"description": "Snatches PR, Issue, SHA references from the URL and copies them to the clipboard so you can paste them easily into comments.",
+"version": "0.1.0",
 "background": {
   "scripts": ["background.js"]
 },
