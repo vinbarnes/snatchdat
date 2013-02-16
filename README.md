@@ -1,4 +1,4 @@
-# Mimeo Chrome Extension for GitHub
+# snatchdat Chrome Extension for GitHub
 
 Snatches PR, Issue, SHA references from relevant GitHub URLs and copies them to
 the clipboard so you can paste them easily into comments.

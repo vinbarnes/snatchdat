@@ -1,7 +1,7 @@
 {
 "manifest_version": 2,
 
-"name": "Mimeo",
+"name": "snatchdat",
 "description": "Snatches PR, Issue, SHA references from the URL and copies them to the clipboard so you can paste them easily into comments.",
 "version": "0.1.0",
 "background": {
