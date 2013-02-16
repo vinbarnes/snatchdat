@@ -15,9 +15,13 @@ function checkForValidUrl(tabId, changeInfo, tab) {
   }
 };
 
-function copyToClipboard(tab) {
+function grabTabUrl(tab) {
+  copyToClipboard(tab.url);
+}
+
+function copyToClipboard(url) {
   re = /(issues|pull|commit)\/([a-f0-9]+)/
-  matchData = tab.url.match(re);
+  matchData = url.match(re);
   //alert(matchData);
   type = matchData[1];
   reference = matchData[2];
@@ -35,8 +39,16 @@ function copyToClipboard(tab) {
   document.body.removeChild(txt);
 };
 
+function keyboardListenerValidator(keyHash) {
+  if (keyHash["url"]) {
+    copyToClipboard(keyHash["url"]);
+  }
+}
 // Look for Issue, PR, or commit/sha URLs
 chrome.tabs.onUpdated.addListener(checkForValidUrl);
 
 // Copy id or sha when clicked
-chrome.pageAction.onClicked.addListener(copyToClipboard);
+chrome.pageAction.onClicked.addListener(grabTabUrl);
+
+//
+chrome.extension.onRequest.addListener(keyboardListenerValidator);
