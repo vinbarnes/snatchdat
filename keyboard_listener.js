@@ -5,11 +5,11 @@ if (window == top) {
 function keyListener(e) {
   // Must press ctrl key to validate. Filter the keys if the keyCode is Shift/Ctrl/Alt since we are
   // capturing it via its own modifier.
-  if (e.ctrlKey && e.keyCode && !e.metaKey && e.keyCode != 16 && e.keyCode != 17 && e.keyCode != 18) {
+  if (e.ctrlKey && e.shiftKey && e.keyCode && !e.metaKey && e.keyCode == 67) {
     chrome.extension.sendRequest({
-      code: e.keyCode,
-      alt: e.altKey,
-      shift: e.shiftKey,
+//       code: e.keyCode,
+//       alt: e.altKey,
+//       shift: e.shiftKey,
       url: window.location.href
     });
   }
