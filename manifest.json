@@ -13,5 +13,9 @@
 },
 "permissions": [
   "tabs"
-]
+],
+"content_scripts": [{
+  "matches": ["https://github.com/*", "http://github.com/*"],
+  "js": ["keyboard_listener.js"]
+}]
 }
